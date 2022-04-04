@@ -1,0 +1,3 @@
+services:
+  getimages.images:
+    class: Drupal\getimages\Services\GetimagesService

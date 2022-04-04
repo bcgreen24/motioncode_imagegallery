@@ -1,0 +1,22 @@
+div.gallery img {
+    width: 125px;
+    height: 90px;
+    margin: 5px;
+}
+
+.gallery_grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image_display img {
+    width: 50vw;
+    height: auto;
+}
+
+.image_display::backdrop {
+    background-color: gray;
+    opacity: 0.75;
+}

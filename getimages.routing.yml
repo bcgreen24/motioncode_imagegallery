@@ -1,0 +1,7 @@
+getimages.images:
+  path: '/gallery'
+  defaults:
+    _controller: Drupal\getimages\Controller\GetimagesController::images
+    _title: 'Image Gallery'
+  requirements:
+    _permission: 'access content'

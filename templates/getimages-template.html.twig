@@ -1,0 +1,12 @@
+<h3>Image Gallery</h3>
+<div class="gallery_grid">
+
+{% for image, src in images %}
+  <div class="gallery"><a class="image_link" href="{{src}}">  {{image | raw}} </a></div>
+{% endfor %}
+
+</div>
+
+
+
+<dialog class="image_display"></dialog>

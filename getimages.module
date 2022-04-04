@@ -1,0 +1,15 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+
+ function getimages_theme($existing, $type, $theme, $path) {
+     return[
+        'getimages-template' => [
+            'variables' => [
+                'images' => NULL,
+            ]
+        ]
+     ];
+ }
+

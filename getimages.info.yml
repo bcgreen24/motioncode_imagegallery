@@ -1,0 +1,6 @@
+name: Get Images
+description: Module for retrieving images from a remote Drupal intance
+type: module
+core_version_requirement: ^9
+package: Motioncode
+
