@@ -5,3 +5,12 @@ getimages.images:
     _title: 'Image Gallery'
   requirements:
     _permission: 'access content'
+getimages.admin_settings:
+  path: '/admin/config/getimages'
+  defaults:
+    _form: '\Drupal\getimages\Form\ModuleConfigurationForm'
+    _title: 'Getimages Configuration'
+  requirements:
+    _permission: 'administer site Configuration'
+
+
