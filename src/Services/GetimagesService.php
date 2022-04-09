@@ -25,9 +25,7 @@ class GetimagesService
     foreach ($json->data as $item) {
       $dom = new DOMDocument();
       $dom->loadHTML($item->attributes->body->value);
-      foreach($dom->getElementsByTagName('p') as $p){
-        $p->remove();
-      }
+     
       foreach($dom->getElementsByTagName('img') as $image_tag) {
         $src = $image_tag->getAttribute('src');
         $image_tag->setAttribute('src', $remote_base . $src);
