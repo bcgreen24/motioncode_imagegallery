@@ -16,7 +16,7 @@ class GetimagesService
   public function getImages()
   {
     $config = \Drupal::config('getimages.admin_settings');
-  
+
     $remote_base = $config->get('getimages_root_url');
     $api_path = $config->get('getimages_api_path');
     $content_type = $config->get('getimages_content_type');
@@ -34,13 +34,13 @@ class GetimagesService
       //   $p->remove();
       // }
       $image_tag = $dom->getElementsByTagName('img')->item(0);
-     
-      foreach($dom->getElementsByTagName('img') as $image_tag) {
+
+      foreach ($dom->getElementsByTagName('img') as $image_tag) {
         $src = $image_tag->getAttribute('src');
         $image_tag->setAttribute('src', $remote_base . $src);
         $image_array[$dom->saveHTML()] = $remote_base . $src;
-
+      }
+      return $image_array;
     }
-    return $image_array;
   }
 }
