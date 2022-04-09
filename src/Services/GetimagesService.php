@@ -34,6 +34,8 @@ class GetimagesService
       //   $p->remove();
       // }
       $image_tag = $dom->getElementsByTagName('img')->item(0);
+     
+      foreach($dom->getElementsByTagName('img') as $image_tag) {
         $src = $image_tag->getAttribute('src');
         $image_tag->setAttribute('src', $remote_base . $src);
         $image_array[$dom->saveHTML()] = $remote_base . $src;
